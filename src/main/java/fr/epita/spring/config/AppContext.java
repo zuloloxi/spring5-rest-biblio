@@ -17,7 +17,7 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 @Configuration
 @PropertySource("classpath:database.properties")
-@EnableJpaRepositories("com.javaspringclub.repository")
+//@EnableJpaRepositories("com.javaspringclub.repository")
 @EnableTransactionManagement
 public class AppContext {
 
@@ -28,9 +28,7 @@ public class AppContext {
     public LocalSessionFactoryBean sessionFactory() {
         LocalSessionFactoryBean sessionFactory = new LocalSessionFactoryBean();
         sessionFactory.setDataSource(dataSource());
-        sessionFactory.setPackagesToScan(new String[] {
-            "net.javaguides.springmvc.entity"
-        });
+        sessionFactory.setPackagesToScan(new String[] { "fr.epita.entite" });
         sessionFactory.setHibernateProperties(hibernateProperties());
         return sessionFactory;
     }
