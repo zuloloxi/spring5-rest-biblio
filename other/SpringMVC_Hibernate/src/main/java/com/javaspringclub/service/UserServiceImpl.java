@@ -31,13 +31,8 @@ public class UserServiceImpl implements UserService {
 	@Override
 	public List<User> getAllUsers() {
 		List<User> list = new ArrayList<User>();
-		try {
 		repository.findAll().forEach(e -> list.add(e));
-		}catch(Exception e) {
-			e.printStackTrace();
-		}
 		return list;
-		
 	}
 
 	@Override

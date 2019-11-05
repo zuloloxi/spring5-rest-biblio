@@ -109,5 +109,11 @@ public class UserController {
 		return mv;
 
 	}
+//	@RequestMapping(value = "/getUser/{id}", method = RequestMethod.GET)
+//	public User getUser(@PathVariable Long id) {
+//		System.out.println("User Page Requested :");
+//		User user = userService.getUserById(id);
+//		return user;
+//	}
 
 }
